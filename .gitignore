@@ -1,0 +1,7 @@
+//private directory files
+kalanto
+node_modules
+
+
+//mac system files
+.DS_Store
