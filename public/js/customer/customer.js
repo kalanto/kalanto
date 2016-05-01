@@ -1,4 +1,4 @@
-var mongoos = require('mongoose');
+var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var customerSchema = new Schema({
