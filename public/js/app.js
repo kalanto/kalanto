@@ -1,1 +1,1 @@
-angular.module('kanalto', []);
+angular.module('kalanto', []);

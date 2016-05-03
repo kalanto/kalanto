@@ -1,4 +1,4 @@
-angular.module('kalanto').service(kalantoService, function(){
+angular.module('kalanto').service('kalantoService', function($http){
    //addCustomer to database aka add a new client
       this.addCustomer = function(customer){
          return $http({

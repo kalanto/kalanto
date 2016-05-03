@@ -6,11 +6,11 @@ var mongoose = require('mongoose');
 var cors = require ('cors');
 var bodyParser=require('body-parser');
 // var FacebookStrategy = require('passport-facebook').Strategy;
-var keys = require('../../kalanto/keys.js');
-var Customer = require('./customer/customer.js');
+var keys = require('./kalanto/keys.js');
+var Customer = require('./public/js/customer/customer.js');
 //application and database setup
 var app = express();
-app.use(express.static(__dirname + "../../public"));
+app.use(express.static(__dirname + "./public"));
 // app.use(session({secret: keys.secretKey}));
 // app.use(passport.initialize());
 // app.use(passport.session());
