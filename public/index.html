@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html ng-app="Kalanto">
    <head>
-      <link rel="stylesheet" href="/css/master.css" media="screen" title="no title" charset="utf-8">
+      <link rel="stylesheet" href="css/master.css" media="screen" title="no title" charset="utf-8">
       <title>Kalanto</title>
    </head>
    <body ng-controller="kalantoController">
       <div id="header"></div>
          <div id="mainBody">
-            <div id="topLeft"></div>
+            <div id="topLeft">
+               <form>
+                  <input id="customer" ng-model="customer.firstname" placeholder="First Name..."></input>
+                     <input id="customer" ng-model="customer.lastname" placeholder="Last Name..."></input>
+                        <input id="customer" ng-model="customer.address" placeholder="Address..."></input>
+                           <input id="customer" ng-model="customer.city" placeholder="city..."></input>
+                              <input id="customer" ng-model="customer.state" placeholder="State..."></input>
+                                 <input id="customer" ng-model="customer.zipCode" type="Number" placeholder="Zip Code..."></input>
+                                    <input id="customer" ng-model="customer.phone.areaCode" type="NUmber" placeholder="Area code..."></input>
+                                       <input id="customer" ng-model="customer.phone.ANI" type="Number" placeholder="Phone number..."></input>
+                     <button id="customer" ng-click="addCustomer(customer)">Add Client</button>
+               </form>
+            </div>
                <div id="topRight"></div>
             <div id="bttmLeft"></div>
                <div id="bttmRight"></div>
@@ -22,9 +34,9 @@
 <!--Script Libraries-->
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
 <!-- Local Scripts -->
-      <script src="public/js/app.js"></script>
-      <script src="public/js/index.js"></script>
-      <script src="mainController.js"></script>
-      <script src="mainService.js"></script>
+      <script src="js/app.js"></script>
+      <script src="js/index.js"></script>
+      <script src="js/mainController.js"></script>
+      <script src="js/mainService.js"></script>
    </body>
 </html>
