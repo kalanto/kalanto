@@ -5,15 +5,15 @@ angular.module('kalanto').service('kalantoService', function($http){
             method: 'POST',
             url: '/customers/add',
             data: {
-               firstname: customer.first,
-               lastname: customer.last,
+               firstname: customer.firstname,
+               lastname: customer.lastname,
                address: customer.address,
                city: customer.city,
                state: customer.state,
-               zipCode: customer.zip,
+               zipCode: customer.zipCode,
                phone:{
-                  areaCode: customer.areacode,
-                  ANI:customer.phone
+                  areaCode: customer.phone.areaCode,
+                  ANI: customer.phone.ANI
                }
             }
          });
@@ -23,6 +23,7 @@ angular.module('kalanto').service('kalantoService', function($http){
       return $http({
          method: 'GET',
          url: '/customers/get'
+
       }).then(function(response){
          return response.data;
       });

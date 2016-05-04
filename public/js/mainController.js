@@ -5,9 +5,9 @@ angular.module('kalanto').controller('kalantoController', function($scope, kalan
       address:"",
       city:"",
       state:"",
-      zip:"",
-      areaCode:"",
-      ANI:""
+      zipCode:"",
+      phone:{areaCode:"",
+      ANI:""}
    };
    // $scope.customer.first="";
    // $scope.customer.last="";

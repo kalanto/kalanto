@@ -1,7 +1,7 @@
 //dependencies
 var express = require('express');
-// var session = require('express-session');
-// var passport = require('passport');
+var session = require('express-session');
+var passport = require('passport');
 var mongoose = require('mongoose');
 var cors = require ('cors');
 var bodyParser=require('body-parser');
@@ -10,10 +10,11 @@ var keys = require('./kalanto/keys.js');
 var Customer = require('./public/js/customer/customer.js');
 //application and database setup
 var app = express();
-app.use(express.static(__dirname + "./public"));
-// app.use(session({secret: keys.secretKey}));
-// app.use(passport.initialize());
-// app.use(passport.session());
+console.log(__dirname);
+app.use(express.static(__dirname + "/public"));
+app.use(session({secret: keys.keys}));
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(bodyParser.json());
 
 mongoose.set('debug', true);
@@ -21,8 +22,10 @@ mongoose.connect('mongodb://localhost/database');
 
 //end points
 app.post('/customers/add', function(req, res){
+   console.log(req.body);
    var customer = new Customer(req.body);
    customer.save(function(err, status){
+      console.log(err);
       return err ? res.status(500).send(err) : res.send(status);
    });
 });
