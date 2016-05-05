@@ -41,14 +41,14 @@ angular.module('kalanto').service('kalantoService', function($http){
    this.deleteCustomer = function(customer){
       return $http({
          method: 'DELETE',
-         url: '/customers/delete' + customer.id
+         url: '/customers/delete/' + customer.id
       });
    };
 //update customer specific
    this.updateCustomer = function(selected){
       return $http({
          method:'PUT',
-         url: '/customers/put'+selected.id,
+         url: '/customers/put/'+selected.id,
          data: {
             customerFirstName: customer.first,
             customerLastName: customer.last,
