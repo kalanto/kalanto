@@ -9,8 +9,10 @@ angular.module('kalanto').controller('kalantoController', function($scope, kalan
       phone:{areaCode:"",
       ANI:""}
    };
-   $scope.getCustomers=function(customer){
-      kalantoService.getCustomers(customer);
+   $scope.getCustomers=function(){
+      kalantoService.getCustomers().then(function(response){
+         $scope.clients = response;
+      });
    };
 // gets customer by ID
 $scope.getOneCustomer = function(customer){

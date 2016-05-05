@@ -5,35 +5,29 @@
       <title>Kalanto</title>
    </head>
    <body ng-controller="kalantoController">
-      <div id="header"></div>
-         <div id="mainBody">
-            <add></add>
-            <!-- <div id="topLeft">
-               <form>
-                  <input id="customer" ng-model="customer.firstname" placeholder="First Name..."></input>
-                     <input id="customer" ng-model="customer.lastname" placeholder="Last Name..."></input>
-                        <input id="customer" ng-model="customer.address" placeholder="Address..."></input>
-                           <input id="customer" ng-model="customer.city" placeholder="city..."></input>
-                              <input id="customer" ng-model="customer.state" placeholder="State..."></input>
-                                 <input id="customer" ng-model="customer.zipCode" type="Number" placeholder="Zip Code..."></input>
-                                    <input id="customer" ng-model="customer.phone.areaCode" type="Number" placeholder="Area code..."></input>
-                                       <input id="customer" ng-model="customer.phone.ANI" type="Number" placeholder="Phone number..."></input>
-                     <button id="customer" ng-click="addCustomer(customer)">Add Client</button>
-               </form>
-            </div> -->
-               <div id="topRight"></div>
-            <div id="bttmLeft"></div>
-               <div id="bttmRight"></div>
-         </div>
+      <menu-dir></menu-dir>
+         <ui-view></ui-view>
       <div id="footer"></div>
 
 
-
+<div class="customersList" ng-repeat"client in customers">
+   <button type="button" ng-click="getCustomers(customers)">Get them</button>
+   <div class="customerLeft">
+      {{client.firstname}} {{client.lastname}}<br>
+      {{client.address}} <br>
+      {{client.state}}    {{client.zipCode}}<br>
+   </div>
+   <div class="customerRight">
+      {{client.phone.areaCode}}  {{client.phone.ANI}}
+   </div>
+</div>
 
 
 
 <!--Script Libraries-->
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+<!-- UI Router -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
 <!-- Local Scripts -->
       <script src="js/app.js"></script>
       <script src="js/mainController.js"></script>

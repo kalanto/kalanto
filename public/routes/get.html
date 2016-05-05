@@ -1,0 +1,10 @@
+<div class="customersList" ng-repeat"client in clients">
+   <div class="customerLeft">
+      {{client.firstname}} {{client.lastname}}<br>
+      {{client.address}} <br>
+      {{client.state}}    {{client.zipCode}}<br>
+   </div>
+   <div class="customerRight">
+      {{client.phone.areaCode}}  {{client.phone.ANI}}
+   </div>
+</div>

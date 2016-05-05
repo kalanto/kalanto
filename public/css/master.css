@@ -1,0 +1,10 @@
+body{
+   height: 500px;
+   width: 100%;
+   background-color: green;
+}
+.menu{
+   width: 100%;
+   height: 200px;
+   background-color: : red;
+}

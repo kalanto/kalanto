@@ -1,39 +1,37 @@
-angular.module('kalanto', ['ui.router']);
+angular.module('kalanto', ['ui.router'])
 
-app.config(function($stateProvider, $urlRouterProvider, $httpProvider){
-   $httpProvider.interceptors.push('httpRequestInterceptor');
+.config(function($stateProvider, $urlRouterProvider, $httpProvider){
 
-   //routing
+//routing
    $stateProvider
       .state('home', {
          url: '/',
-         templateUrl: '../views/home.html',
-         controller: 'insert controller here'
+         templateUrl: '../index.html',
+         // controller: 'insert controller here'
       })
-      .state('add', {
-         url: '/customers/add',
-         templateUrl: '../views/add.html',
-         controller: 'insert file here'
-      })
-      .state('edit',{
-         url: '/customers/put/:id',
-         templateUrl: '../views/edit.html',
-         controller: 'insert file here'
-      })
-      .state('delete',{
-            url: '/customers/delete/:id',
-            templateUrl: '../views/delete.html',
-            controller: 'insert file here'
-      })
+      // .state('add', {
+      //    url: '/customers/add',
+      //    templateUrl: '../routes/add.html',
+      //    // controller: 'insert file here'
+      // })
+      // .state('edit',{
+      //    url: '/customers/put/:id',
+      //    templateUrl: '../routes/edit.html',
+      //    // controller: 'insert file here'
+      // })
+      // .state('delete',{
+      //       url: '/customers/delete/:id',
+      //       templateUrl: '../routes/delete.html',
+      //       // controller: 'insert file here'
+      // })
       .state('getCustomers',{
          url: '/customers/get/',
-         templateUrl: '../views/get.html',
-         controller: 'insert file here'
-
-      })
-      .state('getOneCustomer', {
-         url: '/customers/get/:id',
-         templateUrl: '../views/getOne.html',
-         controller: 'insert file here'
+         templateUrl: '../routes/get.html',
+         // controller: 'insert file here'
       });
+      // .state('getOneCustomer', {
+      //    url: '/customers/get/:id',
+      //    templateUrl: '../routes/getOne.html',
+      //    // controller: 'insert file here'
+      // });
 });

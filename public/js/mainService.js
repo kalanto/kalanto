@@ -23,7 +23,6 @@ angular.module('kalanto').service('kalantoService', function($http){
       return $http({
          method: 'GET',
          url: '/customers/get'
-
       }).then(function(response){
          return response.data;
       });
