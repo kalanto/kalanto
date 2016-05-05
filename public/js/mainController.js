@@ -9,14 +9,6 @@ angular.module('kalanto').controller('kalantoController', function($scope, kalan
       phone:{areaCode:"",
       ANI:""}
    };
-   // $scope.customer.first="";
-   // $scope.customer.last="";
-   // $scope.customer.address="";
-   // $scope.customer.state="";
-   // $scope.customer.zip="";
-   // $scope.customer.phone.arecode="";
-   // $scope.customer.phone.ANI="";
-// gets all customers in database
    $scope.getCustomers=function(customer){
       kalantoService.getCustomers(customer);
    };
