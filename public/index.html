@@ -5,12 +5,19 @@
       <title>Kalanto</title>
    </head>
    <body ng-controller="kalantoController">
-      <menu-dir></menu-dir>
-         <ui-view></ui-view>
-      <div id="footer"></div>
+      <div id="menu" class="menu">
+         <div class="logo">Kalanto</div>
+            <div class="menu-btn">|||</div>
+      </div>
+      <div id="content">
+         <h1>Welcome to Kalanto</h1>
+         <p>K</p>
+      </div>
+      <div id="footer">
+         Copyright © <a href="mailto:scott@scottabooth.com">Scott Booth</a> 2016
+      </div>
 
-
-<div class="customersList" ng-repeat"client in customers">
+<!-- <div class="customersList" ng-repeat"client in customers">
    <button type="button" ng-click="getCustomers(customers)">Get them</button>
    <div class="customerLeft">
       {{client.firstname}} {{client.lastname}}<br>
@@ -20,12 +27,23 @@
    <div class="customerRight">
       {{client.phone.areaCode}}  {{client.phone.ANI}}
    </div>
-</div>
+</div> -->
+<!--menu button script -->
+<script>
+(function(){
+   var menuBtn = $('a.menu-btn'),
+      menuBtnBlock = menuBtn.find('div.menu-btn-block');
+   menuBtn.on('click', function('active');
+});
+})();
 
 
+</script>
 
 <!--Script Libraries-->
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+<!-- jquery -->
+      <script   src="https://code.jquery.com/jquery-2.2.3.js"></script>
 <!-- UI Router -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
 <!-- Local Scripts -->
