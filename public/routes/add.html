@@ -1,3 +1,4 @@
+<!-- script for required fields pop up -->
 <script>
   angular.module('textInputRequired', [])
     .controller('requiredController', ['$scope', function($scope) {
@@ -7,6 +8,8 @@
       };
     }]);
 </script>
+
+
 <form name="clientForm" ng-controller="requiredController">
   <label>First Name:
     <input type="text" name="input" ng-model="customer.firstname"
