@@ -2,44 +2,15 @@
 <html ng-app="kalanto">
    <head>
       <link rel="stylesheet" href="css/master.css" media="screen" title="no title" charset="utf-8">
+      <link rel="stylesheet" href="css/menu.css" media="screen" title="no title" charset="utf-8">
       <title>Kalanto</title>
    </head>
    <body ng-controller="kalantoController">
-      <div id="menu" class="menu">
-         <div class="logo">Kalanto</div>
-            <div class="menu-btn">|||</div>
+      <div class="mainContainer">
+         <nav-dir></nav-dir>
+         <ui-view></ui-view>
+      <foot-dir></foot-dir>
       </div>
-      <div id="content">
-         <h1>Welcome to Kalanto</h1>
-         <p>K</p>
-      </div>
-      <div id="footer">
-         Copyright © <a href="mailto:scott@scottabooth.com">Scott Booth</a> 2016
-      </div>
-
-<!-- <div class="customersList" ng-repeat"client in customers">
-   <button type="button" ng-click="getCustomers(customers)">Get them</button>
-   <div class="customerLeft">
-      {{client.firstname}} {{client.lastname}}<br>
-      {{client.address}} <br>
-      {{client.state}}    {{client.zipCode}}<br>
-   </div>
-   <div class="customerRight">
-      {{client.phone.areaCode}}  {{client.phone.ANI}}
-   </div>
-</div> -->
-<!--menu button script -->
-<script>
-(function(){
-   var menuBtn = $('a.menu-btn'),
-      menuBtnBlock = menuBtn.find('div.menu-btn-block');
-   menuBtn.on('click', function('active');
-});
-})();
-
-
-</script>
-
 <!--Script Libraries-->
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
 <!-- jquery -->
@@ -50,5 +21,7 @@
       <script src="js/app.js"></script>
       <script src="js/mainController.js"></script>
       <script src="js/mainService.js"></script>
+      <script src="js/navDir.js"></script>
+      <script src="js/footDir.js"></script>
    </body>
 </html>
