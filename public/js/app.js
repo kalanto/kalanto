@@ -6,8 +6,7 @@ angular.module('kalanto', ['ui.router'])
    $stateProvider
       .state('home', {
          url: '/',
-         templateUrl: '../index.html',
-         // controller: 'insert controller here'
+         templateUrl: 'routes/home.html',
       })
       // .state('add', {
       //    url: '/customers/add',
@@ -34,4 +33,5 @@ angular.module('kalanto', ['ui.router'])
       //    templateUrl: '../routes/getOne.html',
       //    // controller: 'insert file here'
       // });
+      $urlRouterProvider.otherwise('/')
 });
