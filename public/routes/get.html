@@ -1,10 +1,16 @@
-<div class="customersList" ng-repeat"client in clients">
+<div class="content" ng-repeat="client in clients">
    <div class="customerLeft">
       {{client.firstname}} {{client.lastname}}<br>
       {{client.address}} <br>
       {{client.state}}    {{client.zipCode}}<br>
    </div>
    <div class="customerRight">
-      {{client.phone.areaCode}}  {{client.phone.ANI}}
+      ({{client.phone.areaCode}}) {{client.phone.ANI}} <br>
+      {{client.email}}<br>
+      Amount owed: {{client.debt}}<br>
+      Due date: {{client.payDate}}<br>
+   </div>
+   <div class="customerClear">
+      <hr>
    </div>
 </div>
