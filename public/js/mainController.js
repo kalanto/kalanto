@@ -39,4 +39,36 @@ $scope.updateCustomer = function(selected){
 $scope.deleteCustomer = function(customer){
    kalantoService.deleteCustomer(customer);
 };
+$scope.customerOwes = function(date){
+   var dude = new Date()
+      var day = dude.getDay()
+         if(day > 0 && day <= 10){
+            day = 5
+            console.log(day);
+            kalantoService.customerOwes(day).then(function(response){
+               $scope.owes = response;
+            }
+         )}
+         else if(day > 10 && day <= 19){
+            day = 15
+            console.log(day);
+            kalantoService.customerOwes(day).then(function(response){
+               $scope.owes = response;
+            }
+         )}
+         else if(day > 19 && day <=28){
+            day = 25
+            console.log(day);
+            kalantoService.customerOwes(day).then(function(response){
+               $scope.owes = response;
+            }
+         )}
+         else{
+            day = 25
+            console.log(day);
+            kalantoService.customerOwes(day).then(function(response){
+               $scope.owes = response;
+            }
+         )}
+}
 });
