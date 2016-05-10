@@ -4,7 +4,7 @@ angular.module('kalanto').service('kalantoService', function($http){
          return $http({
             method: 'POST',
             url: '/customers/add',
-            data: {
+            data:{
                firstname: customer.firstname,
                lastname: customer.lastname,
                address: customer.address,
@@ -14,7 +14,10 @@ angular.module('kalanto').service('kalantoService', function($http){
                phone:{
                   areaCode: customer.phone.areaCode,
                   ANI: customer.phone.ANI
-               }
+               },
+               email: customer.email,
+               debt: customer.debt,
+               payDate: customer.payDate
             }
          });
       };
