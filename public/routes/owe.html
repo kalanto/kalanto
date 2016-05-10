@@ -1,0 +1,7 @@
+<div class="content">
+   <button class="button" ng-click="customerOwes()">Populate List</button>
+<div class="owe" ng-repeat="customer in owes">
+   Name: {{customer.firstname}}  {{customer.lastname}}<br>
+   Amout owed: {{customer.debt}}<br>
+   Due date: {{customer.payDate}}
+</div>
