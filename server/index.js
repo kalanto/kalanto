@@ -9,6 +9,7 @@ var keys = require('../kalanto/keys.js');
 // var Customer = require('./Schema/customer.js');
 var customerEndPointControl = require('./customerEndPointControl.js');
 var attorneyEndPointControl = require('./attorneyEndPointControl.js');
+var owesCustomersEndPointControl = require('./owesEndpointControl.js');
 //application and database setup
 var app = express();
 // console.log(__dirname);
@@ -33,6 +34,8 @@ app.get('/attorney/get', attorneyEndPointControl.getAttorney);
 app.get('/attorney/get/:id',attorneyEndPointControl.getOneAttorney);
 app.put('/attorney/put/:id', attorneyEndPointControl.updateAttorney);
 app.delete('/attorney/delete/:id', attorneyEndPointControl.deleteAttorney);
+//end point for customers who owes
+app.get('/customers/owe/:day', owesCustomersEndPointControl.owesCustomers);
 
 app.listen('3000', function(){
    console.log('The N.S.A. is twerking on port 3000');
