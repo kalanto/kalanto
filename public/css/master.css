@@ -1,14 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Codystar:400,300);
 
-@media only screen and (max-device-width: 500px){
-   .logo{
-      font-size: 20px;
-   }
-   .menu-btn{
-      font-size: 20px;
-   }
-}
 
+/*zero out page*/
 *{
    margin: 0;
    padding: 0;
@@ -16,6 +9,7 @@
 body{
    background-color: rgb(151,154,136);
 }
+/*Nav Bar*/
 #menu{
    background-color:rgb(148,200,238);
    display: flex;
@@ -29,22 +23,50 @@ body{
 }
 .menu-btn{
    font-family: Codystar;
-   font-size: 70px;
+   font-size: 80px;
    color: white;
    display: block;
 }
-#content{
+/*HOME PAGE*/
+.homeLogo{
+   font-family: Codystar;
+   color: white;
+   text-align: center;
+}
+.content{
    position: relative;
    padding: 10%;
    font-family: Codystar;
    color: white;
-   text-align: center;
+   /*text-align: center;*/
+   height: calc(100vh-24px-96.3px)
 }
-#content p{
+.content p{
    font-family: Codystar;
    color: rgb(106,163,244);
    font-size: 300px;
    text-align: center;
+}
+/*CLIENT DISPLAY PAGE*/
+.customerLeft{
+   float: left;
+   text-align: left;
+}
+.customerRight{
+   float: right;
+   text-align: left;
+}
+.customerClear{
+   clear: both;
+}
+/*ADD CLIENT PAGE*/
+#customer{
+   padding: .6%;
+}
+#customerButton{
+   padding: 1%;
+   border-radius: 25%;
+   background-color: rgb(96,149,215);
 }
 #footer{
    margin: 0 auto;
@@ -54,9 +76,18 @@ body{
    font-family: Codystar;
    font-size: 20px;
    color: white;
-   position: absolute;
-   bottom: 0;
+   /*position: absolute;
+   bottom: 0;*/
 }
 #footer a{
    color: white;
+}
+
+@media (max-width: 410px){
+   .logo{
+      font-size: 40px;
+   }
+   .menu-btn{
+      font-size: 30px;
+   }
 }
