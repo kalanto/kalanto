@@ -65,4 +65,12 @@ angular.module('kalanto').service('kalantoService', function($http){
          }
       });
    };
+   this.customerOwes = function(day){
+      return $http({
+         method:'GET'
+      ,  url: '/customers/owe/' + day
+   }).then(function(response){
+      return response.data
+   })
+   }
 });
