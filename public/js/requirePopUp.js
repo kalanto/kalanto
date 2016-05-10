@@ -1,6 +1,6 @@
 var text = element(by.binding('customer.firstname', 'customer.lastname', 'customer.address', 'customer.city', 'customer.state', 'customer.zipCode', 'customer.phone.areaCode', 'customer.phone.ANI'));
 var valid = element(by.binding('myForm.input.$valid'));
-var input = element(by.model('customer.firstname', 'customer.lastname', 'customer.address', 'customer.city', 'customer.state', 'customer.zipCode', 'customer.phone.areaCode', 'customer.phone.ANI'));
+var input = element(by.model('customer.firstname', 'customer.lastname', 'customer.address', 'customer.city', 'customer.state', 'customer.zipCode', 'customer.phone.areaCode', 'customer.phone.ANI', 'customer.email', 'customer.debt', 'customer.payDate'));
 
 it('should initialize to model', function() {
   expect(text.getText()).toContain('guest');
