@@ -14,6 +14,8 @@ var customerSchema = new Schema({
    },
    email:{type:String, required: true},
    debt:{type:Number, required: true},
-   payDate: {type:Number, required:true}
+   payDate: {type:Number, required:true},
+   paymentDate: {type:Number},
+   paymentAmount: {type:Number}
 });
 module.exports =  mongoose.model('customer',customerSchema);

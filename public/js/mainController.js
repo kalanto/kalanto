@@ -40,35 +40,39 @@ $scope.deleteCustomer = function(customer){
    kalantoService.deleteCustomer(customer);
 };
 $scope.customerOwes = function(date){
-   var dude = new Date()
-      var day = dude.getDay()
-         if(day > 0 && day <= 10){
-            day = 5
-            console.log(day);
-            kalantoService.customerOwes(day).then(function(response){
-               $scope.owes = response;
-            }
-         )}
-         else if(day > 10 && day <= 19){
-            day = 15
-            console.log(day);
-            kalantoService.customerOwes(day).then(function(response){
-               $scope.owes = response;
-            }
-         )}
-         else if(day > 19 && day <=28){
-            day = 25
-            console.log(day);
-            kalantoService.customerOwes(day).then(function(response){
-               $scope.owes = response;
-            }
-         )}
-         else{
-            day = 25
-            console.log(day);
-            kalantoService.customerOwes(day).then(function(response){
-               $scope.owes = response;
-            }
-         )}
+   //gets the current date
+   var due = new Date() //creats todays date
+      var day = due.getDay() //creates todays day number
+         var paymentDate = day  //todays day for payment received
+   
+         // if(day > 0 && day <= 10){
+         //    day = 5
+         //    console.log(day);
+         //    kalantoService.customerOwes(day).then(function(response){
+         //       $scope.owes = response;
+         //    }
+         // )}
+         // else if(day > 10 && day <= 19){
+         //    day = 15
+         //    console.log(day);
+         //    kalantoService.customerOwes(day).then(function(response){
+         //       $scope.owes = response;
+         //    }
+         // )}
+         // else if(day > 19 && day <=28){
+         //    day = 25
+         //    console.log(day);
+         //    kalantoService.customerOwes(day).then(function(response){
+         //       $scope.owes = response;
+         //    }
+         // )}
+         // else{
+         //    day = 25
+         //    console.log(day);
+         //    kalantoService.customerOwes(day).then(function(response){
+         //       $scope.owes = response;
+         //       //throw data back just like when you add user
+         //    }
+         // )}
 }
 });
